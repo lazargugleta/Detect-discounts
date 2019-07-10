@@ -18,6 +18,7 @@ def amazon_de():
     con_price = price.split(sep, 1)[0]
     converted_price = int(con_price.replace('.',''))
 
+    #price
     print(title.strip())
     print(converted_price)
 
