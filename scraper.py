@@ -82,7 +82,7 @@ def send_mail():
   server.starttls()
   server.ehlo()
 
-  server.login('lazar.gugleta@gmail.com','lafydtbsoiufkwye')
+  server.login(EMAIL,PASSWORD)
 
   subject = 'Price fell down!'
 
