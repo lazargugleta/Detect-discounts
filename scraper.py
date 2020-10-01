@@ -66,7 +66,7 @@ def send_mail():
         'lazar.gugleta@gmail.com',
         msg
     )
-    print('Hey Email has been sent!')
+    print('Hey Your Email has been sent!')
 
     server.quit()
 
