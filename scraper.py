@@ -5,7 +5,11 @@ import smtplib
 headers = {
     "User-agent": 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'}
 
+<<<<<<< HEAD
 URL = 'https://www.amazon.de/gp/product/B0756CYWWD/ref=as_li_tl?ie=UTF8&tag=idk01e-21&camp=1638&creative=6742&linkCode=as2&creativeASIN=B0756CYWWD&linkId=18730d371b945bad11e9ea58ab9d8b32'
+=======
+URL = 'https://www.amazon.de/dp/B07XVWXW1Q/ref=sr_1_10?keywords=laptop&qid=1581888312&sr=8-10'
+>>>>>>> update
 def amazon_de():
 
     page = requests.get(URL, headers=headers)
@@ -13,7 +17,11 @@ def amazon_de():
     soup = BeautifulSoup(page.content, 'html.parser')
 
     title = soup.find(id="productTitle").get_text()
+<<<<<<< HEAD
     price = soup.find(id="priceblock_ourprice").get_text()
+=======
+    price = soup.find(id="buyNew_noncbb").get_text()
+>>>>>>> update
     sep = ','
     con_price = price.split(sep, 1)[0]
     converted_price = int(con_price.replace('.', ''))
@@ -72,4 +80,8 @@ def send_mail():
 
 
 amazon_de()
+<<<<<<< HEAD
 edustore()
+=======
+#edustore()
+>>>>>>> update
